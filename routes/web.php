@@ -5,11 +5,8 @@ use App\Http\Controllers\Socialite\ProviderRedirectController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
-
-
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/auth', function () {
@@ -22,7 +19,6 @@ Route::get('/auth/{provider}/redirect', ProviderRedirectController::class)->name
 // Callback from provider
 Route::get('/auth/{provider}/callback', ProviderCallbackController::class)->name('auth.callback');
 
-// Add this in web.php
 Route::get('/home', function () {
     return view('home', ['user' => Auth::user()]);
 })->name('home');
