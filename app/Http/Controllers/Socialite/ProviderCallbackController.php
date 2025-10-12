@@ -16,7 +16,8 @@ class ProviderCallbackController extends Controller
             return redirect()->route('auth')->withErrors(['provider' => 'Invalid Provider']);
         }
 
-        $socialUser = Socialite::driver($provider)->user();
+        $socialUser = Socialite::driver($provider)->stateless()->socialUser();
+
 
         // Generate Username
         $username = $this->generateUsername($socialUser, $provider);
