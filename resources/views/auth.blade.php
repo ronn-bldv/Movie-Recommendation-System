@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +30,8 @@
                     <h2 class="text-xl text-center text-text-primary">Sign In</h2>
                 </div>
 
-                <form action="" method="POST" class="space-y-4">
+                <form action="{{ route('login') }}" method="POST" class="space-y-4">
+                    @csrf
                     <input type="hidden" name="action" value="login">
 
                     <input type="text" name="username" placeholder="Username" required
@@ -101,7 +103,8 @@
                     </div>
                     <h2 class="text-xl text-center text-text-primary">Sign Up</h2>
                 </div>
-                <form action="../db/authRequests.php" method="POST" class="space-y-4">
+                <form action="{{ route('register') }}" method="POST" class="space-y-4">
+                    @csrf
                     <input type="hidden" name="action" value="register">
 
                     <input type="text" name="username" placeholder="Username" required
