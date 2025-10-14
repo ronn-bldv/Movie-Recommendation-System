@@ -18,7 +18,7 @@
         {{-- AUTHENTICATED USER --}}
         @auth
             <span class="hidden sm:inline text-text-secondary">
-                Hi, {{ Auth::user()->name }}!
+                Hi, {{ Auth::user()->name ?? Auth::user()->username}}!
             </span>
 
             {{-- ADMIN ONLY: Add Movie --}}
@@ -39,7 +39,7 @@
             @endif
 
             {{-- LOGOUT --}}
-            <form action="" method="POST" class="inline-flex">
+            <form action="{{ route('logout') }}" method="POST" class="inline-flex">
                 @csrf
                 <button type="submit"
                         class="btn btn-circle bg-red-600 hover:bg-red-700 text-white tooltip"

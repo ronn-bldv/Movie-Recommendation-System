@@ -23,3 +23,14 @@ Route::get('/home', function () {
     return view('home', ['user' => Auth::user()]);
 })->name('home');
 
+Route::post('/register', [AuthController::class, 'register'])
+    ->name('register');
+
+Route::post('/login', [AuthController::class, 'login'])
+    ->name('login');
+
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->name('logout');
+
+Route::get('/login', [AuthController::class, 'login'])
+    ->name('login');
