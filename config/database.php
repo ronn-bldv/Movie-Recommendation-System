@@ -63,6 +63,20 @@ return [
             ]) : [],
         ],
 
+        'mysql_movies' => [
+            'driver' => 'mysql',
+            'host' => env('DB_MOVIES_HOST', '127.0.0.1'),
+            'port' => env('DB_MOVIES_PORT', '3306'),
+            'database' => env('DB_MOVIES_DATABASE', 'movie_recosys'),
+            'username' => env('DB_MOVIES_USERNAME', 'root'),
+            'password' => env('DB_MOVIES_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
