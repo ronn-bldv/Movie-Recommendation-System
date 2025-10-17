@@ -9,7 +9,7 @@
 
         {{-- BACK TO MOVIES (Hidden on Home page) --}}
         @if (!request()->routeIs('home'))
-            <a href="" class="btn btn-outline btn-accent flex items-center gap-1 text-sm">
+            <a href="{{ route('home')}}" class="btn btn-outline btn-accent flex items-center gap-1 text-sm">
                 <i class="bx bx-arrow-back"></i>
                 <span class="hidden sm:inline">Back to Movies</span>
             </a>
