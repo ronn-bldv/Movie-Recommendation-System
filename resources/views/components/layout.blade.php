@@ -13,10 +13,16 @@
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen text-text-primary bg-primary-bg">
     @include('partials.includes.header')
-    <div class="flex justify-center items-center min-h-screen">
+    <div class="min-h-screen">
         {{ $slot }}
     </div>
+    @include('partials.includes.footer')
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    @stack('scripts')
 </body>
 </html>
