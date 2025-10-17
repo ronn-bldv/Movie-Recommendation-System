@@ -9,3 +9,6 @@ FACEBOOK_REDIRECT_URI=http://localhost/dashboard/movierecosystem/public/auth/fac
 GITHUB_CLIENT_ID=Ov23likjJVKYWFzWaXjS
 GITHUB_CLIENT_SECRET=45ab81db14b906b86d3131684b908c2566b7d1ed
 GITHUB_REDIRECT_URI=http://localhost/dashboard/movierecosystem/public/auth/github/callback
+
+
+jeric ito yung nasa app mismo natin HAAHAHHA
